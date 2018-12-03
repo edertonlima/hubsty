@@ -55,27 +55,34 @@
 			.filtro-busca {
 				display: table-cell;
 				background-color: #dddddd;
-				width: 130px;
+				width: 132px;
 				padding: 0 20px;
-				line-height: 51px;
+				line-height: 37px;
+
+				img {
+					display: inline-block;
+					margin-left: 4px;
+				}
 			}
 
 			.busca-lupa {
 				width: 53px;
-				height: 53px;
+				height: 55px;
 				padding: 0;
 				background-color: $vermelho;
 				position: absolute;
 				right: 0px;
-				top: 0;
+				top: -1px;
+				text-align: center;
 
 				&:hover {
 					background-color: darken($vermelho, 10%);
 				}
 
 				img {
-					position: relative;
-					top: 7px;
+					display: block;
+					line-height: 38px;
+					margin: 0 auto;
 				}
 			}
 		}
@@ -116,6 +123,7 @@
 				vertical-align: middle;
 				top: 0px;
 				position: relative;
+				padding: 0 0 0px 26px;
 			}
 
 			&:hover {
@@ -153,9 +161,9 @@
 				a {
 					font-size: .75rem;
 					color:  $amarelo;
-					margin: 0px 0 0 63px;
+					margin: 0px 0 0 52px;
 					position: relative;
-					top: -10px;
+					top: -4px;
 					text-decoration: underline;
 
 					&:hover {

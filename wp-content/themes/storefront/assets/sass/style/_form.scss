@@ -484,3 +484,7 @@ fieldset {
 		}
 	}
 }
+
+table tbody tr:nth-child(2n) td, fieldset, fieldset legend, table th, table tbody td {
+	background-color: transparent;
+}

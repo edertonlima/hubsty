@@ -6,7 +6,7 @@ h1 {
 	display: table;
 	padding: 0;
 	float: left;
-	width: 130px;
+	max-width: 220px;
 	position: absolute;
 	@include animacao;
 

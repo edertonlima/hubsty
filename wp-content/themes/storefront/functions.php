@@ -139,3 +139,33 @@ function redirect_to_my_account_orders( $wp ) {
         }*/
     }
 }
+
+/* ALTERA ORDENAÇÃO FIELDS checkout */
+add_filter( 'woocommerce_default_address_fields', 'bbloomer_reorder_checkout_fields' );
+  
+function bbloomer_reorder_checkout_fields( $fields ) {
+ 
+    // default priorities: 
+    // 'first_name' - 10
+    // 'last_name' - 20
+    // 'company' - 30
+    // 'country' - 40
+    // 'address_1' - 50
+    // 'address_2' - 60
+    // 'city' - 70
+    // 'state' - 80
+    // 'postcode' - 90
+  
+  // e.g. move 'company' above 'first_name':
+  // just assign priority less than 10
+  $fields['first_name']['priority'] = 1;
+  $fields['last_name']['priority'] = 2;
+  $fields['email']['priority'] = 3;
+  $fields['phone']['priority'] = 4;
+  $fields['country']['priority'] = 5;
+  $fields['state']['priority'] = 6;
+  $fields['city']['priority'] = 7;
+  $fields['postcode']['priority'] = 8;
+ 
+  return $fields;
+}

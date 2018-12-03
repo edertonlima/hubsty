@@ -49,15 +49,19 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 
 	<?php endif; ?>
 
-	<h3 id="order_review_heading"><?php esc_html_e( 'Your order', 'woocommerce' ); ?></h3>
+	<div class="cart-collaterals">
 
-	<?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
+		<h3 id="order_review_heading"><?php esc_html_e( 'Your order', 'woocommerce' ); ?></h3>
 
-	<div id="order_review" class="woocommerce-checkout-review-order">
-		<?php do_action( 'woocommerce_checkout_order_review' ); ?>
+		<?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
+
+		<div id="order_review" class="woocommerce-checkout-review-order">
+			<?php do_action( 'woocommerce_checkout_order_review' ); ?>
+		</div>
+
+		<?php do_action( 'woocommerce_checkout_after_order_review' ); ?>
+
 	</div>
-
-	<?php do_action( 'woocommerce_checkout_after_order_review' ); ?>
 
 </form>
 

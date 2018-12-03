@@ -1,5 +1,128 @@
-.woocommerce-checkout {
-	#order_review {
-		
+.select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple, .select2-container--default.select2-container--open.select2-container--below .select2-selection--single, .select2-container--default .select2-selection--single {
+	border: none!important;
+}
+
+
+.select2-container--open .select2-dropdown--below {
+	left: -11px;
+	padding: 0 5px;
+	box-sizing: content-box;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+	display: none!important;
+}
+
+#customer_details {
+	float: left;
+	width: 58%;
+	margin-right: 4%;
+
+	.col-1, .col-2 {
+		/*width: 50%;
+		float: left;
+		@include box-sizing;*/
+	}
+
+	.col-1 {
+		//padding-right: 5px;
+	}
+
+	.col-2 {
+		float: left;
+		width: 100%;
+	}
+}
+
+
+.checkout.woocommerce-checkout {
+	.cart-collaterals {
+		width: 33.3333333333%;
+		float: left;
+	}
+}
+
+.woocommerce-checkout h3 {
+	@include clear;
+	width: 100%;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+	line-height: 20px;
+	position: relative;
+	z-index: 999;
+}
+
+.woocommerce-billing-fields input {
+	@include box-sizing;
+}
+
+#payment {
+	#place_order {
+		background-color: $amarelo;
+		margin-top: 10px;
+		width: 100%;
+		@include box-sizing;
+
+		&:hover {
+			background-color: darken($amarelo, 10%);
+		}
+	}
+
+	.place-order {
+		background-color: transparent !important;
+
+		.woocommerce-privacy-policy-text {
+			text-align: center;
+		}
+	}
+
+	.wc_payment_methods {
+		padding: 50px 0 20px;
+
+		li {
+			background-color: transparent !important;
+
+			label {
+				font-weight: $bold;
+				font-size: 1rem;
+			}
+
+			.payment_box {
+				background-color: transparent !important;
+			}
+
+			img {
+				vertical-align: middle;
+			}
+		}
+	}
+}
+
+.shop_table.woocommerce-checkout-review-order-table {
+	text-align: left;
+}
+
+#order_review {
+	background-color: transparent!important;
+}
+
+
+.shop_table.woocommerce-checkout-review-order-table {
+	thead {
+		display: none;
+	}
+}
+
+.cart-collaterals .woocommerce-checkout-review-order-table .cart-subtotal {
+	th, td {
+		padding: 20px 0px 0px;
+		font-weight: $bold;
+		font-size: 1rem;
+
+		span {
+			font-weight: $bold;
+			font-size: 1rem;
+		}
 	}
 }

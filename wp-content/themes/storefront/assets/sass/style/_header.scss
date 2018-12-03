@@ -50,12 +50,13 @@
 				width: 100%;
 				display: table-cell;
 				border: 0;
+				@include box-sizing;
 			}
 
 			.filtro-busca {
 				display: table-cell;
 				background-color: #dddddd;
-				width: 132px;
+				width: 95px;
 				padding: 0 20px;
 				line-height: 37px;
 
@@ -67,12 +68,12 @@
 
 			.busca-lupa {
 				width: 53px;
-				height: 55px;
+				height: 53px;
 				padding: 0;
 				background-color: $vermelho;
 				position: absolute;
 				right: 0px;
-				top: -1px;
+				top: 0px;
 				text-align: center;
 
 				&:hover {
@@ -116,14 +117,21 @@
 
 			span {
 				color: #ffffff;
-				font-size: 1rem;
+				font-size: .78rem;
 				line-height: .8rem;
 				display: table-cell;
 				width: 198px;
 				vertical-align: middle;
 				top: 0px;
 				position: relative;
-				padding: 0 0 0px 26px;
+				padding: 0 0 0px 5px;
+			}
+
+			&.active {
+				span {
+					font-size: 1rem;
+					top: -8px;
+				}
 			}
 
 			&:hover {
@@ -157,13 +165,15 @@
 			.logout {
 				@include clear;
 				display: block;
+				height: 0px;
 
 				a {
 					font-size: .75rem;
 					color:  $amarelo;
-					margin: 0px 0 0 52px;
+					margin: 0px;
 					position: relative;
-					top: -4px;
+					top: -18px;
+					left: 69px;
 					text-decoration: underline;
 
 					&:hover {
